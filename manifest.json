@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAI Copy Code Fix",
+  "version": "0.4.2",
+  "description": "Adds a copy button to diffs to copy the patched code (excludes deleted lines). Works in canvas, chat, and Codex.",
+  "permissions": ["clipboardWrite"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
